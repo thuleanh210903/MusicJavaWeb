@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Users</title>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div><h2>Manage Users</h2></div>
+    <div>
+        <a th:href="@{/categories/new}">Add New Category</a>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="category : ${categoryList}">
+                <tr>
+                    <td>[[${category.id_category}]]</td>
+                    <td>[[${category.name_category}]]</td>
+                    <td>
+                        <a th:href="@{'/categories/edit/' + ${category.id_category}}">Edit</a>
+                        <a th:href="@{'/categories/delete/' + ${category.id_category}}">Delete</a>
+                    </td>
+                </tr>
+            </th:block>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
