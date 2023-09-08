@@ -30,6 +30,7 @@ public class CategoryController {
     @GetMapping("/categories/new")
     public String showNewForm(Model model) {
         model.addAttribute("category", new Category());
+        model.addAttribute("pageTitle","Add New Category");
         return "cate_form";    }
 
     @PostMapping("/categories/save")
@@ -43,11 +44,28 @@ public class CategoryController {
         try {
             Category category = categoryService.getId(id_category);
             model.addAttribute("category", category);
+            model.addAttribute("pageTitle","Edit Category (ID: "+id_category+")");
+            return "cate_form";
         } catch (CateNotFoundException e) {
-            re.addFlashAttribute("message", "The category has been saved successfully");
+            re.addFlashAttribute("message", e.getMessage());
             throw new RuntimeException(e);
-            return "redirect:/categories";
+//            return "redirect:/categories";
         }
     }
+
+    @GetMapping("/categories/delete/{id_category}")
+    public String deleteCate(@PathVariable("id_category")Integer id_category, Model model, RedirectAttributes re) {
+        try {
+            categoryService.delete(id_category);
+
+        } catch (CateNotFoundException e) {
+            re.addFlashAttribute("message", e.getMessage());
+            throw new RuntimeException(e);
+
+        }
+        return "redirect:/categories";
+    }
+
+
 
 }

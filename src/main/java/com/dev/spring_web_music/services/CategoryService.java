@@ -30,6 +30,10 @@ public class CategoryService {
         throw new CateNotFoundException("Cound not find any category with id" + id_category);
     }
 
+    public void delete(Integer id_category) throws CateNotFoundException {
+        repo.deleteById(id_category);
+    }
+
 
 
 }

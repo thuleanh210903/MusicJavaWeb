@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>[[${pageTitle}]]</title>
 </head>
 <body>
 <h1>
-    Add new user
+    [[${pageTitle}]]
 </h1>
 <form th:action="@{/categories/save}" method="post" th:object="${category}">
+    <input type="hidden" th:field="*{id_category}" />
     <div>
         <div>
             <label>Name: </label>
