@@ -2,6 +2,7 @@ package com.dev.spring_web_music.model;
 
 
 import jakarta.persistence.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name = "songs")
@@ -13,6 +14,17 @@ public class Song {
 
     @Column
     private String song_name;
+
+    @Column
+    private String lyric;
+
+
+    @Column
+    private String image;
+
+    @Column
+    private Integer id_category;
+
 
     public Integer getId_song() {
         return id_song;
@@ -53,13 +65,4 @@ public class Song {
     public void setId_category(Integer id_category) {
         this.id_category = id_category;
     }
-
-    @Column
-    private String lyric;
-
-    @Column
-    private String image;
-
-    @Column
-    private Integer id_category;
 }

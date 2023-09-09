@@ -20,6 +20,7 @@
         <th>Lyric</th>
         <th>Image</th>
         <th>Category</th>
+        <th>*</th>
       </tr>
       </thead>
       <tbody>
@@ -28,7 +29,7 @@
           <td>[[${song.id_song}]]</td>
           <td>[[${song.song_name}]]</td>
           <td>[[${song.lyric}]]</td>
-          <td>[[${song.image}]]</td>
+          <td><img width="240" height="200" th:src="@{'uploads/'+${song.image}}"></td>
           <td>[[${song.id_category}]]</td>
           <td>
             <a th:href="@{'/songs/edit/' + ${song.id_song}}">Edit</a>

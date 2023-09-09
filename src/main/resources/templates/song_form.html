@@ -8,12 +8,23 @@
 <h1>
     [[${pageTitle}]]
 </h1>
-<form th:action="@{/songs/save}" method="post" th:object="${song}">
+<form th:action="@{/songs/save}" method="post" th:object="${song}" enctype="multipart/form-data">
     <div>
         <div>
             <label>Name: </label>
             <div>
-<!--                <input type="text" th:field="*{song_name}"/>-->
+                <input type="text" th:field="*{song_name}"/>
+            </div>
+            <label>Lyric</label>
+            <div>
+                <input type="text" th:field="*{lyric}" />
+            </div>
+            <label>Image</label>
+            <div>
+                <input type="file" accept="image/*" name="image"/>
+            </div>
+            <div>
+                <input type="text" th:field="*{id_category}">
             </div>
             <div>
                 <button type="submit">Save</button>
