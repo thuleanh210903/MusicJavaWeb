@@ -35,5 +35,10 @@ public class CategoryService {
     }
 
 
+//    public void findCate(String name) {
+//        Integer id =
+//    }
+
+
 
 }

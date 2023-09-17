@@ -32,7 +32,6 @@ public class CategoryController {
         model.addAttribute("category", new Category());
         model.addAttribute("pageTitle","Add New Category");
         return "cate_form";    }
-
     @PostMapping("/categories/save")
     public String saveCate (Category category) {
         categoryService.save(category);
@@ -45,7 +44,7 @@ public class CategoryController {
             Category category = categoryService.getId(id_category);
             model.addAttribute("category", category);
             model.addAttribute("pageTitle","Edit Category (ID: "+id_category+")");
-            return "cate_form";
+            return "cate_edit";
         } catch (CateNotFoundException e) {
             re.addFlashAttribute("message", e.getMessage());
             throw new RuntimeException(e);

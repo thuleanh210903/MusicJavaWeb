@@ -1,7 +1,9 @@
 package com.dev.spring_web_music.services;
 
 import com.dev.spring_web_music.controller.CateNotFoundException;
+import com.dev.spring_web_music.model.Category;
 import com.dev.spring_web_music.model.Song;
+import com.dev.spring_web_music.repository.CategoryRepository;
 import com.dev.spring_web_music.repository.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -25,6 +27,9 @@ import java.util.Optional;
 
 @Service
 public class SongService {
+
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     @Autowired
     private SongRepository repo;
@@ -60,6 +65,15 @@ public class SongService {
             return result.get();
         }
         throw new CateNotFoundException("Cound not find any category with id" + id_song);
+    }
+
+
+    public String getCategoryName(Integer id_category)  throws CateNotFoundException{
+        Optional<Category> category = categoryRepository.findById(id_category);
+        if (category.isPresent()) {
+            return category.get().getName_category();
+        }
+        throw new CateNotFoundException("Could not find any category with id: " + id_category);
     }
 
     public void delete(Integer id_song) throws CateNotFoundException {

@@ -26,6 +26,7 @@ public class SongController {
     @GetMapping("/songs")
     public String showSongList(Model model) {
         List<Song> songList = songService.listAll();
+
         model.addAttribute("songList", songList);
         return "songs";
     }
