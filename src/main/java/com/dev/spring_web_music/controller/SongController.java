@@ -39,8 +39,8 @@ public class SongController {
     }
 
     @PostMapping("/songs/save")
-    public String saveSong(@RequestParam("song_name") String song_name, @RequestParam("id_category") Integer id_category, @RequestParam("lyric") String lyric, @RequestParam("image") MultipartFile image) throws IOException {
-        songService.save(song_name, lyric, image, id_category);
+    public String saveSong(@RequestParam("song_name") String song_name, @RequestParam("id_category") Integer id_category, @RequestParam("lyric") String lyric, @RequestParam("image") MultipartFile image,  @RequestParam("file_music") MultipartFile file_music) throws IOException {
+        songService.save(song_name, lyric, image, file_music, id_category);
         return "redirect:/songs";
     }
 
@@ -50,7 +50,7 @@ public class SongController {
             Song song = songService.getId(id_song);
             model.addAttribute("song", song);
             model.addAttribute("pageTitle", "Edit Song(ID: " + id_song + ")");
-            return "song_form";
+            return "song_edit";
         } catch (CateNotFoundException e) {
             re.addFlashAttribute("message", e.getMessage());
             throw new RuntimeException(e);

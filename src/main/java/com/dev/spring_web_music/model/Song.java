@@ -18,12 +18,15 @@ public class Song {
     @Column
     private String lyric;
 
-
     @Column
     private String image;
 
     @Column
+    private String file_music;
+
+    @Column
     private Integer id_category;
+
 
 
     public Integer getId_song() {
@@ -56,6 +59,14 @@ public class Song {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getFile_music() {
+        return file_music;
+    }
+
+    public void setFile_music(String file_music) {
+        this.file_music = file_music;
     }
 
     public Integer getId_category() {

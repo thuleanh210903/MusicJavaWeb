@@ -41,7 +41,7 @@ public class SongService {
         return (List<Song>) repo.findAll();
     }
 
-    public void save(String song_name, String lyric, MultipartFile image, Integer id_category) throws IOException {
+    public void save(String song_name, String lyric, MultipartFile image, MultipartFile file_music, Integer id_category) throws IOException {
         Song song = new Song();
         song.setSong_name(song_name);
         song.setLyric(lyric);
@@ -56,6 +56,14 @@ public class SongService {
         InputStream inputStream = image.getInputStream();
         Files.copy(inputStream, path.resolve(imageFileName), StandardCopyOption.REPLACE_EXISTING);
         song.setImage(imageFileName);
+
+
+        String muisicFileName = file_music.getOriginalFilename();
+        saveMusicFile(file_music, muisicFileName);
+        song.setFile_music(muisicFileName);
+        repo.save(song);
+
+
         repo.save(song);
     }
 
@@ -78,6 +86,23 @@ public class SongService {
 
     public void delete(Integer id_song) throws CateNotFoundException {
         repo.deleteById(id_song);
+    }
+
+
+    public void saveMusicFile(MultipartFile file_music, String musicFileName) throws IOException {
+        if (musicFileName.contains("..")) {
+            System.out.println("Không phải là tệp hợp lệ");
+        }
+        String uploadDirectory = "upload_music";
+        Path uploadPath = Paths.get(uploadDirectory);
+        if (!Files.exists(uploadPath)) {
+            Files.createDirectories(uploadPath);
+        }
+        Path musicPath = uploadPath.resolve(musicFileName);
+        try (InputStream inputStreamMusic = file_music.getInputStream()) {
+            Files.copy(inputStreamMusic, musicPath, StandardCopyOption.REPLACE_EXISTING);
+        }
+
     }
 
 }
