@@ -164,7 +164,7 @@
               </tr>
               </thead>
               <tbody>
-              <th:block th:each="song : ${songList}">
+              <th:block th:each="song, stat : ${songList}">
                 <tr>
                   <td width="10"><input type="checkbox" name="check1" value="1"></td>
                   <td>[[${song.id_song}]]</td>
@@ -172,15 +172,17 @@
                   <td><img width="40" height="40" th:src="@{'uploads/'+${song.image}}"></td>
                   <td>
                     <audio controls>
-                      <source th:src="@{'http://localhost:8080/'+${song.file_music}}"
-                              type="audio/mpeg">
+                      <source th:src="@{'http://localhost:8080/'+${song.file_music}}" type="audio/mpeg">
                     </audio>
                   </td>
-                  <td>[[${song.id_category}]]</td>
-                  <td class="table-td-center"><a class="btn btn-primary btn-sm trash" type="button" title="Delete" th:href="@{'/songs/delete/' + ${song.id_song}}" ><i class="fas fa-trash-alt"></i>
-                  </a>
+                  <td th:text="${categoryNames[__${stat.index}__]}"></td>
+                  <td class="table-td-center">
+                    <a class="btn btn-primary btn-sm trash" type="button" title="Delete" th:href="@{'/songs/delete/' + ${song.id_song}}">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
                     <a class="btn btn-primary btn-sm edit" type="button" title="Edit" th:href="@{'/songs/edit/' + ${song.id_song}}"
-                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
+                       data-toggle="modal" data-target="#ModalUP">
+                      <i class="fas fa-edit"></i>
                     </a>
                   </td>
                 </tr>

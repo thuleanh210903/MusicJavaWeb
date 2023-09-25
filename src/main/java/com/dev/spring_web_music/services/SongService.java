@@ -41,6 +41,11 @@ public class SongService {
         return (List<Song>) repo.findAll();
     }
 
+    public String getCategoryName(Integer id_category){
+        Optional<Category>  category = categoryRepository.findById(id_category);
+        return category.map(Category::getName_category).orElse("");
+    }
+
     public void save(String song_name, String lyric, MultipartFile image, MultipartFile file_music, Integer id_category) throws IOException {
         Song song = new Song();
         song.setSong_name(song_name);
@@ -76,13 +81,7 @@ public class SongService {
     }
 
 
-    public String getCategoryName(Integer id_category)  throws CateNotFoundException{
-        Optional<Category> category = categoryRepository.findById(id_category);
-        if (category.isPresent()) {
-            return category.get().getName_category();
-        }
-        throw new CateNotFoundException("Could not find any category with id: " + id_category);
-    }
+
 
     public void delete(Integer id_song) throws CateNotFoundException {
         repo.deleteById(id_song);
