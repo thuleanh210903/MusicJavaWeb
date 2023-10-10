@@ -135,7 +135,7 @@
             <div class="col-sm-2">
 
               <a th:href="@{/songs/new}" class="btn btn-add btn-sm" title="Thêm"><i class="fas fa-plus"></i>
-                Add new genre</a>
+                Add new song</a>
             </div>
 
             <div class="col-sm-2">
@@ -160,6 +160,7 @@
                 <th width="150">Image</th>
                 <th width="150">Link</th>
                 <th width="150">Genre</th>
+                <th width="150">Artist</th>
                 <th width="100">Tính năng</th>
               </tr>
               </thead>
@@ -176,6 +177,7 @@
                     </audio>
                   </td>
                   <td th:text="${categoryNames[__${stat.index}__]}"></td>
+                  <td th:text="${artistNames[__${stat.index}__]}"></td>
                   <td class="table-td-center">
                     <a class="btn btn-primary btn-sm trash" type="button" title="Delete" th:href="@{'/songs/delete/' + ${song.id_song}}">
                       <i class="fas fa-trash-alt"></i>

@@ -4,7 +4,6 @@ package com.dev.spring_web_music.controller;
 import com.dev.spring_web_music.model.Category;
 import com.dev.spring_web_music.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.relational.core.sql.In;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
@@ -23,7 +22,7 @@ public class CategoryController {
    public String showCateList(Model model) {
         List<Category> categoryList = categoryService.listAll();
         model.addAttribute("categoryList", categoryList);
-        return "categories";
+        return "category/categories";
 
    }
 
@@ -31,7 +30,7 @@ public class CategoryController {
     public String showNewForm(Model model) {
         model.addAttribute("category", new Category());
         model.addAttribute("pageTitle","Add New Category");
-        return "cate_form";    }
+        return "category/cate_form";    }
     @PostMapping("/categories/save")
     public String saveCate (Category category) {
         categoryService.save(category);
@@ -44,7 +43,7 @@ public class CategoryController {
             Category category = categoryService.getId(id_category);
             model.addAttribute("category", category);
             model.addAttribute("pageTitle","Edit Category (ID: "+id_category+")");
-            return "cate_edit";
+            return "category/cate_edit";
         } catch (CateNotFoundException e) {
             re.addFlashAttribute("message", e.getMessage());
             throw new RuntimeException(e);

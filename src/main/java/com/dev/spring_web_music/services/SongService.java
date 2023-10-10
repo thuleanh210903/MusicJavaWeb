@@ -1,8 +1,10 @@
 package com.dev.spring_web_music.services;
 
 import com.dev.spring_web_music.controller.CateNotFoundException;
+import com.dev.spring_web_music.model.Artist;
 import com.dev.spring_web_music.model.Category;
 import com.dev.spring_web_music.model.Song;
+import com.dev.spring_web_music.repository.ArtistRepository;
 import com.dev.spring_web_music.repository.CategoryRepository;
 import com.dev.spring_web_music.repository.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +33,10 @@ public class SongService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+
+    @Autowired
+    private ArtistRepository artistRepository;
+
     @Autowired
     private SongRepository repo;
 
@@ -46,11 +52,17 @@ public class SongService {
         return category.map(Category::getName_category).orElse("");
     }
 
-    public void save(String song_name, String lyric, MultipartFile image, MultipartFile file_music, Integer id_category) throws IOException {
+
+    public String getArtistName(Integer id_artist){
+        Optional<Artist> artist = artistRepository.findById(id_artist);
+        return artist.map(Artist::getArtist_name).orElse("");
+    }
+    public void save(String song_name, String lyric, MultipartFile image, MultipartFile file_music, Integer id_category, Integer id_artist) throws IOException {
         Song song = new Song();
         song.setSong_name(song_name);
         song.setLyric(lyric);
         song.setId_category(id_category);
+        song.setId_artist(id_artist);
         String imageFileName = image.getOriginalFilename();
 
         if(imageFileName.contains("..")) {
@@ -63,14 +75,14 @@ public class SongService {
         song.setImage(imageFileName);
 
 
-        String muisicFileName = file_music.getOriginalFilename();
-        saveMusicFile(file_music, muisicFileName);
-        song.setFile_music(muisicFileName);
-        repo.save(song);
+        String musicFileName = file_music.getOriginalFilename();
+        saveMusicFile(file_music, musicFileName);
+        song.setFile_music(musicFileName);
 
 
         repo.save(song);
     }
+
 
     public Song getId(Integer id_song) throws CateNotFoundException {
         Optional<Song> result = repo.findById(id_song);

@@ -11,4 +11,8 @@ public interface SongRepository extends JpaRepository<Song, Integer> {
 
     @Query("SELECT s FROM Song s JOIN FETCH s.category")
     List<Song> listAllWithCategory();
+
+
+    @Query("SELECT s FROM Song s JOIN FETCH s.artist")
+    List<Song> listAllWithArtist();
 }

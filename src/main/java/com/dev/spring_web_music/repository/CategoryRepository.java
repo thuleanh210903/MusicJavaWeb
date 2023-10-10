@@ -9,7 +9,5 @@ import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category,Integer> {
 
-//    @Query("SELECT c FROM categories c WHERE c.name_category LIKE '%p%'")
-//    public List<Category> searchList(String keyword);
 
 }

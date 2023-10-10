@@ -24,8 +24,11 @@ public class Song {
     @Column
     private String file_music;
 
-    @Column(insertable = false, updatable = false) // Add this annotation
+    @Column// Add this annotation
     private Integer id_category;
+
+    @Column
+    private Integer id_artist;
 
 
 
@@ -77,7 +80,20 @@ public class Song {
         this.id_category = id_category;
     }
 
+
+    public Integer getId_artist() {return  id_artist;}
+
+    public void setId_artist(Integer id_artist) {this.id_artist = id_artist;}
+
+
+
+
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_category", insertable = false, updatable = false)
     private Category category;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_artist", insertable = false, updatable = false)
+    private Artist artist;
 }
