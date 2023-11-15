@@ -13,10 +13,13 @@ import java.util.List;
 public class HomeController {
 
 
-    @GetMapping("/")
+    @GetMapping("/admin")
     public String showHomePage() {
 
         return "index";
     }
+
+
+
 
 }
