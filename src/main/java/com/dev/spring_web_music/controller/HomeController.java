@@ -14,9 +14,19 @@ public class HomeController {
 
 
     @GetMapping("/admin")
-    public String showHomePage() {
+    public String showHomeAdminPage() {
 
         return "index";
+    }
+
+    @GetMapping("/home")
+    public String showHomeClientPage() {
+        return "client/index";
+    }
+
+    @GetMapping("/about")
+    public String showAboutPage() {
+        return "client/about";
     }
 
 

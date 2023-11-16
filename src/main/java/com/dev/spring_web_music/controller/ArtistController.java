@@ -71,4 +71,14 @@ public class ArtistController {
 
 
 
+    //client
+    @GetMapping("/allArtist")
+    public String showAllArtist(Model model) {
+        List<Artist> allArtist = artistService.listAll();
+        model.addAttribute("allArtist", allArtist);
+
+        return "client/artist";
+    }
+
+
 }
