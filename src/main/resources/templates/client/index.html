@@ -1,623 +1,488 @@
-<!DOCTYPE html>
-<html lang="zxx">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="DJoz Template">
-    <meta name="keywords" content="DJoz, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DJoz | Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Musico</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="/assets/client/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/nowfont.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/rockville.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/assets/client/css/style.css" type="text/css">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/client/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/client/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/client/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/client/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/client/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/client/css/nice-select.css">
+    <link rel="stylesheet" href="/assets/client/css/audioplayer.css">
+    <link rel="stylesheet" href="/assets/client/css/flaticon.css">
+    <link rel="stylesheet" href="/assets/client/css/gijgo.css">
+    <link rel="stylesheet" href="/assets/client/css/animate.css">
+    <link rel="stylesheet" href="/assets/client/css/slick.css">
+    <link rel="stylesheet" href="/assets/client/css/slicknav.css">
+    <link rel="stylesheet" href="/assets/client/css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-2">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="/assets/client/img/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10">
-                    <div class="header__nav">
-                        <nav class="header__menu mobile-menu">
-                            <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a  th:href="@{/about}">About</a></li>
-                                <li><a th:href="@{/allArtist}">Artists</a></li>
-                                <li><a th:href="@{/allSong}">Songs</a></li>
-                                <li><a th:href = "@{/allGenre}">Genres</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./about.html">About</a></li>
-                                        <li><a href="./blog.html">Blog</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="/assets/client/img/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="index.html">home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="track.html">tracks</a></li>
+                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">blog</a></li>
+                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                     <li><a href="elements.html">elements</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="social_icon text-right">
+                                    <ul>
+                                        <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
                                     </ul>
-                                </li>
-                                <li><a href="./contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header__right__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-            <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header Section End -->
+    <!-- header-end -->
 
-    <!-- Hero Section Begin -->
-    <section class="hero spad set-bg" data-setbg="/assets/client/img/hero-bg.png">
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="slider_text text-center ">
+                            <h3>Musico </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- music_area  -->
+    <div class="music_area">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="hero__text">
-                        <span>New single</span>
-                        <h1>Feel the heart beats</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br />tempor
-                            incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+
+
                     </div>
                 </div>
+
             </div>
         </div>
-        <div class="linear__icon">
-            <i class="fa fa-angle-double-down"></i>
-        </div>
-    </section>
-    <!-- Hero Section End -->
+    </div>
+    <!-- music_area end  -->
 
-    <!-- Event Section Begin -->
-    <section class="event spad">
+    <!-- about_area  -->
+    <div class="about_area">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Upcoming Events</h2>
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-md-6">
+                    <div class="about_thumb">
+                        <img class="img-fluid" src="/assets/client/img/about/about_1.png" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="event__slider owl-carousel">
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/client/img/events/event-1.jpg">
-                                <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
-                                </div>
-                            </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/client/img/events/event-2.jpg">
-                                <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
-                                </div>
-                            </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/client/img/events/event-3.jpg">
-                                <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
-                                </div>
-                            </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="/assets/client/img/events/event-2.jpg">
-                                <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
-                                </div>
-                            </div>
-                            <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
-                                <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                            </div>
+                <div class="col-xl-7 col-md-6">
+                    <div class="about_info">
+                        <h3>Jack Kalib</h3>
+                        <p>Esteem spirit temper too say adieus who direct esteem. It esteems luckily or picture placing drawing. Apartments frequently or motionless on reasonable projecting expression enim ad minim veniam quis nostrud exercitation we have supported programmes to help alleviate human suffering through animal welfare when people might depend.</p>
+                        <div class="signature">
+                            <img src="/assets/client/img/about/signature.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Event Section End -->
+    </div>
+    <!--/ about_area  -->
 
-    <!-- About Section Begin -->
-    <section class="about spad">
+    <!-- youtube_video_area  -->
+    <div class="youtube_video_area">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-3 col-lg-3 col-md-6" th:each="artist:${allArtist}">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img th:src="@{'uploads/'+${artist.artist_image}}" alt="" style=" width: 100%;">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="hover_inner">
+                                <span>Singer</span>
+                                <h3><a th:href="@{'/artist/song/' + ${artist.id_artist}}" >[[${artist.artist_name}]]</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more col-xl-3 or col-lg-3 or col-md-6 elements for other artists -->
+            </div>
+        </div>
+    </div>
+    <!-- / youtube_video_area  -->
+
+    <!-- music_area  -->
+    <div class="music_area music_gallery">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about__pic">
-                        <img src="/assets/client/img/about/about.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about__text">
-                        <div class="section-title">
-                            <h2>DJ Alexandra Rud</h2>
-                            <h1>About me</h1>
-                        </div>
-                        <p>DJ Rainflow knows how to move your mind, body and soul by delivering tracks that stand out
-                            from the norm. As if this impressive succession of high impact, floor-filling bombs wasn’t
-                            enough to sustain.</p>
-                        <a href="#" class="primary-btn">CONTACT ME</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section End -->
-
-    <!-- Services Section Begin -->
-    <section class="services">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="services__left set-bg" data-setbg="/assets/client/img/services/service-left.jpg">
-                        <a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="row services__list">
-                        <div class="col-lg-6 p-0 order-lg-1 col-md-6 order-md-1">
-                            <div class="service__item deep-bg">
-                                <img src="/assets/client/img/services/service-1.png" alt="">
-                                <h4>Wedding</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2">
-                            <div class="service__item">
-                                <img src="/assets/client/img/services/service-2.png" alt="">
-                                <h4>Clubs and bar</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-4 col-md-6 order-md-4">
-                            <div class="service__item deep-bg">
-                                <img src="/assets/client/img/services/service-4.png" alt="">
-                                <h4>DJ lessons</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-0 order-lg-3 col-md-6 order-md-3">
-                            <div class="service__item">
-                                <img src="/assets/client/img/services/service-3.png" alt="">
-                                <h4>Corporate events</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                <div class="row">
+                        <div class="col-xl-12">
+                            <div class="section_title text-center mb-65">
+                                <h3>Popular Song</h3>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
-
-    <!-- Track Section Begin -->
-    <section class="track spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="section-title">
-                        <h2>Latest tracks</h2>
-                        <h1>Music podcast</h1>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="track__all">
-                        <a href="#" class="primary-btn border-btn">View all tracks</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-7 p-0">
-                    <div class="track__content nice-scroll">
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_1"
-                                data-url="music-files/1.mp3"></div>
-                            <div class="jp-audio jp_container_1" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                                <div class="col-xl-9 col-md-9">
+                                    <div class="music_field">
+                                            <div class="thumb">
+                                                    <img src="/assets/client/img/music_man/1.png" alt="">
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_2"
-                                data-url="music-files/2.mp3"></div>
-                            <div class="jp-audio jp_container_2" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
+                                                <div class="audio_name">
+                                                    <div class="name">
+                                                        <h4>Frando Kally</h4>
+                                                        <p>10 November, 2019</p>
                                                     </div>
+                                                        <audio preload="auto" controls>
+                                                                <source src="https://www.w3schools.com/html/horse.mp3">
+                                                            </audio>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_3"
-                                data-url="music-files/3.mp3"></div>
-                            <div class="jp-audio jp_container_3" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
+                                <div class="col-xl-3 col-md-3">
+                                    <div class="music_btn">
+                                            <a href="#" class="boxed-btn">buy albam</a>
                                     </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
+                                </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                                <div class="col-xl-9 col-md-9">
+                                    <div class="music_field">
+                                            <div class="thumb">
+                                                    <img src="/assets/client/img/music_man/2.png" alt="">
+                                                </div>
+                                                <div class="audio_name">
+                                                    <div class="name">
+                                                        <h4>Frando Kally</h4>
+                                                        <p>10 November, 2019</p>
                                                     </div>
+                                                        <audio preload="auto" controls>
+                                                                <source src="https://www.w3schools.com/html/horse.mp3">
+                                                            </audio>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_4"
-                                data-url="music-files/4.mp3"></div>
-                            <div class="jp-audio jp_container_4" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
+                                <div class="col-xl-3 col-md-3">
+                                    <div class="music_btn">
+                                            <a href="#" class="boxed-btn">buy albam</a>
                                     </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
+                                </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                                <div class="col-xl-9 col-md-9">
+                                    <div class="music_field">
+                                            <div class="thumb">
+                                                    <img src="/assets/client/img/music_man/3.png" alt="">
+                                                </div>
+                                                <div class="audio_name">
+                                                    <div class="name">
+                                                        <h4>Frando Kally</h4>
+                                                        <p>10 November, 2019</p>
                                                     </div>
+                                                        <audio preload="auto" controls>
+                                                                <source src="https://www.w3schools.com/html/horse.mp3">
+                                                            </audio>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-xl-3 col-md-3">
+                                    <div class="music_btn">
+                                            <a href="#" class="boxed-btn">buy albam</a>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- music_area end  -->
+
+    <!-- gallery -->
+    <div class="gallery_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h3>Image Galleries</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row grid">
+                    <div class="col-xl-5 col-lg-5 grid-item cat1 col-md-6">
+                        <div class="single-gallery mb-30">
+                                <div class="portfolio-img">
+                                        <img src="/assets/client/img/gallery/1.png" alt="">
+                                </div>
+                                <div class="gallery_hover">
+                                </div>
                         </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_5"
-                                data-url="music-files/5.mp3"></div>
-                            <div class="jp-audio jp_container_5" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 grid-item cat3 cat4 col-md-6">
+                        <div class="single-gallery mb-30">
+                                <div class="portfolio-img">
+                                        <img src="/assets/client/img/gallery/2.png" alt="">
                                 </div>
-                            </div>
+                                <div class="gallery_hover">
+
+                                </div>
                         </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_6"
-                                data-url="music-files/6.mp3"></div>
-                            <div class="jp-audio jp_container_6" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar">
-                                                <div>
-                                                    <div class="jp-play-bar">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">0:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">00:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i
-                                                class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 0%;"></div>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 grid-item cat4 col-md-6">
+                        <div class="single-gallery mb-30">
+                                <div class="portfolio-img">
+                                        <img src="/assets/client/img/gallery/3.png" alt="">
                                 </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 grid-item cat2 col-md-6">
+                        <div class="single-gallery mb-30">
+                            <div class="portfolio-img">
+                                    <img src="/assets/client/img/gallery/4.png" alt="">
+                            </div>
+                            <div class="gallery_hover">
+
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 grid-item cat2 col-md-6">
+                        <div class="single-gallery mb-30">
+                            <div class="portfolio-img">
+                                    <img src="/assets/client/img/gallery/5.png" alt="">
+                            </div>
+                            <div class="gallery_hover">
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 p-0">
-                    <div class="track__pic">
-                        <img src="/assets/client/img/track-right.jpg" alt="">
+        </div>
+    </div>
+    <!--/ gallery -->
+
+    <!-- contact_rsvp -->
+    <div class="contact_rsvp">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="text text-center">
+                        <h3>Contact For RSVP</h3>
+                        <a class="boxed-btn3" href="contact.html">Contact Me</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Track Section End -->
+    </div>
+    <!--/ contact_rsvp -->
 
-    <!-- Youtube Section Begin -->
-    <section class="youtube spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Youtube feed</h2>
-                        <h1>Latest videos</h1>
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                            <div class="footer_widget">
+                                    <h3 class="footer_title">
+                                            Services
+                                    </h3>
+                                <div class="subscribe-from">
+                                        <form action="#">
+                                                <input type="text" placeholder="Enter your mail">
+                                                <button type="submit" >Subscribe</button>
+                                            </form>
+                                </div>
+                                <p class="sub_text">Esteem spirit temper too say adieus who direct esteem esteems luckily.</p>
+                                </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="/assets/client/img/youtube/youtube-1.jpg">
-                            <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                        <div class="youtube__item__text">
-                            <h4>David Guetta Miami Ultra Music Festival 2019</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="/assets/client/img/youtube/youtube-2.jpg">
-                            <a href="https://www.youtube.com/watch?v=K4DyBUG242c?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                        <div class="youtube__item__text">
-                            <h4>Martin Garrix (Full live-set) | SLAM!Koningsdag</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="img/youtube/youtube-3.jpg">
-                            <a href="https://www.youtube.com/watch?v=S19UcWdOA-I?autoplay=1" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                        <div class="youtube__item__text">
-                            <h4>Dimitri Vegas, Steve Aoki & Like Mike’s “3 Are Legend”</h4>
+                    <div class="col-xl-5 col-md-5 offset-xl-1">
+                        <div class="footer_widget">
+                                <h3 class="footer_title">
+                                        Contact Me
+                                </h3>
+                            <ul>
+                                <li><a href="#">conbusi@support.com
+                                    </a></li>
+                                <li><a href="#">+10 873 672 6782
+                                    </a></li>
+                                <li><a href="#">600/D, Green road, Kings Garden NewYork-6732</a></li>
+                            </ul>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class=" fa fa-facebook "></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Youtube Section End -->
-
-    <!-- Countdown Section Begin -->
-    <section class="countdown spad set-bg" data-setbg="/assets/client/img/countdown-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="countdown__text">
-                        <h1>Tomorrowland 2020</h1>
-                        <h4>Music festival start in</h4>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-7 col-md-6">
+                        <p class="copy_right">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
-                    <div class="countdown__timer" id="countdown-time">
-                        <div class="countdown__item">
-                            <span>20</span>
-                            <p>days</p>
+                    <div class="col-xl-5 col-md-6">
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="#">home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">tracks</a></li>
+                                <li><a href="#">blog</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
                         </div>
-                        <div class="countdown__item">
-                            <span>45</span>
-                            <p>hours</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>18</span>
-                            <p>minutes</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>09</span>
-                            <p>seconds</p>
-                        </div>
-                    </div>
-                    <div class="buy__tickets">
-                        <a href="#" class="primary-btn">Buy tickets</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Services Section End -->
-
-    <!-- Footer Section Begin -->
-    <footer class="footer footer--normal spad set-bg" data-setbg="/assets/client/img/footer-bg.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer__address">
-                        <ul>
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                <p>Phone</p>
-                                <h6>1-677-124-44227</h6>
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope"></i>
-                                <p>Email</p>
-                                <h6>DJ.Music@gmail.com</h6>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-1 col-md-6">
-                    <div class="footer__social">
-                        <h2>DJoz</h2>
-                        <div class="footer__social__links">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 offset-lg-1 col-md-6">
-                    <div class="footer__newslatter">
-                        <h4>Stay With me</h4>
-                        <form action="#">
-                            <input type="text" placeholder="Email">
-                            <button type="submit"><i class="fa fa-send-o"></i></button>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- Footer Section End -->
+    <!--/ footer end  -->
 
-    <!-- Js Plugins -->
-    <script src="/assets/client/js/jquery-3.3.1.min.js"></script>
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+            crossorigin="anonymous">
+    </script>
+    <script src="/assets/client/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/assets/client/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/client/js/popper.min.js"></script>
     <script src="/assets/client/js/bootstrap.min.js"></script>
-    <script src="/assets/client/js/jquery.magnific-popup.min.js"></script>
-    <script src="/assets/client/js/jquery.nicescroll.min.js"></script>
-    <script src="/assets/client/js/jquery.barfiller.js"></script>
-    <script src="/assets/client/js/jquery.countdown.min.js"></script>
-    <script src="/assets/client/js/jquery.slicknav.js"></script>
     <script src="/assets/client/js/owl.carousel.min.js"></script>
-    <script src="/assets/client/js/main.js"></script>
+    <script src="/assets/client/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/client/js/ajax-form.js"></script>
+    <script src="/assets/client/js/waypoints.min.js"></script>
+    <script src="/assets/client/js/jquery.counterup.min.js"></script>
+    <script src="/assets/client/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/client/js/audioplayer.js"></script>
+    <script src="/assets/client/js/scrollIt.js"></script>
+    <script src="/assets/client/js/jquery.scrollUp.min.js"></script>
+    <script src="/assets/client/js/wow.min.js"></script>
+    <script src="/assets/client/js/nice-select.min.js"></script>
+    <script src="/assets/client/js/jquery.slicknav.min.js"></script>
+    <script src="/assets/client/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/client/js/plugins.js"></script>
+    <script src="/assets/client/js/gijgo.min.js"></script>
+    <script src="/assets/client/js/slick.min.js"></script>
+    <!--contact js-->
+    <script src="/assets/client/js/contact.js"></script>
+    <script src="/assets/client/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/assets/client/js/jquery.form.js"></script>
+    <script src="/assets/client/js/jquery.validate.min.js"></script>
+    <script src="/assets/client/js/mail-script.js"></script>
 
-    <!-- Music Plugin -->
-    <script src="/assets/client/js/jquery.jplayer.min.js"></script>
-    <script src="/assets/client/js/jplayerInit.js"></script>
+    <script src="/assets/client/js/main.js"></script>
+    
+		<script>
+                $(function() {
+                    $('audio').audioPlayer({
+
+                    });
+                });
+            </script>
 </body>
 
 </html>

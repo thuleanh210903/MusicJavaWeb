@@ -3,6 +3,8 @@ package com.dev.spring_web_music.controller;
 
 import com.dev.spring_web_music.model.Artist;
 
+import com.dev.spring_web_music.model.Category;
+import com.dev.spring_web_music.model.Song;
 import com.dev.spring_web_music.services.ArtistService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,13 +74,26 @@ public class ArtistController {
 
 
     //client
-    @GetMapping("/allArtist")
+    @GetMapping("/home")
     public String showAllArtist(Model model) {
         List<Artist> allArtist = artistService.listAll();
         model.addAttribute("allArtist", allArtist);
 
-        return "client/artist";
+        return "client/index";
     }
 
 
+    @GetMapping("/artist/song/{id_artist}")
+    public String showSongOfArtist(Model model, @PathVariable("id_artist")Integer id_artist, RedirectAttributes re) {
+        System.out.println(id_artist);
+        try {
+            List<Song> songs = artistService.songList(id_artist);
+            model.addAttribute("songs", songs);
+            System.out.println(songs);
+            return "client/artistTrack";
+        } catch (CateNotFoundException e) {
+            re.addFlashAttribute("message", e.getMessage());
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -6,6 +6,7 @@ import com.dev.spring_web_music.model.Category;
 import com.dev.spring_web_music.model.Song;
 import com.dev.spring_web_music.repository.ArtistRepository;
 import com.dev.spring_web_music.repository.CategoryRepository;
+import com.dev.spring_web_music.repository.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,6 +24,7 @@ import java.util.Optional;
 public class ArtistService {
 
     @Autowired private ArtistRepository repo;
+    @Autowired private SongRepository songRepo;
 
     public List<Artist> listAll() {
         return (List<Artist>) repo.findAll();
@@ -58,6 +60,12 @@ public class ArtistService {
 
     public void delete(Integer id_artist) throws CateNotFoundException {
         repo.deleteById(id_artist);
+    }
+
+
+    public List<Song> songList(Integer id_artist) throws CateNotFoundException {
+            List<Song> songs =   repo.listSongsByArtist(id_artist);
+            return  songs;
     }
 
 

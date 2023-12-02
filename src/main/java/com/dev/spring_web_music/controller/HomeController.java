@@ -19,10 +19,7 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/home")
-    public String showHomeClientPage() {
-        return "client/index";
-    }
+
 
     @GetMapping("/about")
     public String showAboutPage() {
