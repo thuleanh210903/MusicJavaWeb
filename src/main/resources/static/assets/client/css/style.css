@@ -1774,7 +1774,7 @@ h3 {
   box-sizing: border-box;
   margin: 1em 0;
   padding: 0 24px;
-  width: 100%;
+  width: 87%;
   height: auto;
   align-items: center;
   border: 1px solid #DDE2E6;
@@ -1783,6 +1783,7 @@ h3 {
   margin: 0;
   padding: 0;
   border: none;
+  margin-left: 26px;
 }
 
 /* line 25, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_music_area.scss */

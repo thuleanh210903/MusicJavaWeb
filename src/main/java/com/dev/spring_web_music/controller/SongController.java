@@ -92,4 +92,21 @@ public class SongController {
         }
         return "redirect:/songs";
     }
+
+    @GetMapping("/allSong")
+    public String showSongClient(Model model){
+        List<Song> songListClient = songService.listAll();
+
+
+        List<String> artistNames = new ArrayList<>();
+        for (Song song : songListClient) {
+            String artistName = songService.getArtistName(song.getId_artist());
+
+            artistNames.add(artistName);
+        }
+        model.addAttribute("artistNames",artistNames);
+        model.addAttribute("songList", songListClient);
+        return "client/songs";
+
+    }
 }
