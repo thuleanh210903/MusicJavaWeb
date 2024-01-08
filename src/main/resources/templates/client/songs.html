@@ -358,11 +358,31 @@
 
                         <h1>[[${song.song_name}]]</h1>
                     </div>
-                     <div class="lecteur">
-                        <audio style="width: 100%;" class="fc-media">
-                            <source th:src="@{'http://localhost:8080/'+${song.file_music}}" type="audio/mp3"/>
+                    <div class="lecteur">
+                        <audio style="width: 100%;" class="fc-media" th:attr="id='audioPlayer_' + ${song.id_song}">
+                            <source th:src="@{'http://localhost:8080/' + ${song.file_music}}" type="audio/mp3"/>
                         </audio>
-                     </div>
+                        <h3 style="color:red;"><a href="javascript:void(0);" th:attr="onclick='downloadSong(' + ${song.id_song} + ')'">Download</a></h3>
+                    </div>
+                    <script>
+                        function downloadSong(id_song) {
+                            var audio = document.getElementById(`audioPlayer_${id_song}`);
+                            var audioUrl = audio.getElementsByTagName('source')[0].src;
+                            alert("Audio URL: " + audioUrl);
+                            var downloadLink = document.createElement('a');
+                            downloadLink.href = audioUrl;
+                            downloadLink.download = getFileName(audioUrl);
+                            document.body.appendChild(downloadLink);
+                            downloadLink.click();
+                            document.body.removeChild(downloadLink);
+                        }
+                        function getFileName(url) {
+                            var slashIndex = url.lastIndexOf('/');
+                            return url.substring(slashIndex + 1);
+                        }
+                    </script>
+
+
                 </div>
             </div>
         </div>
@@ -441,9 +461,7 @@
             <div class="row">
                 <div class="col-xl-7 col-md-6">
                     <p class="copy_right">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                     </p>
                 </div>
                 <div class="col-xl-5 col-md-6">

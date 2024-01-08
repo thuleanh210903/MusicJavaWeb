@@ -44,6 +44,18 @@ public class ArtistController {
         artistService.save(artist_name,artist_image);
         return "redirect:/artists";
     }
+
+    @PostMapping("/artists/save_edit")
+    public String saveArtistEdit(@RequestParam("id_artist") Integer id, @RequestParam("artist_name") String artist_name, @RequestParam("artist_image") MultipartFile artist_image) throws IOException {
+        try {
+            artistService.delete(id);
+        } catch (CateNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        artistService.save(artist_name,artist_image);
+        return "redirect:/artists";
+    }
+
     @GetMapping("/artists/edit/{id_artist}")
     public String showEditForm(@PathVariable("id_artist")Integer id_artist, Model model, RedirectAttributes re) {
         try {

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/assets/admin/css/main.css">
     <link rel="stylesheet" href="/assets/admin/css/loopple/loopple.css">
 
+
+
 </head>
 <body>
 <nav th:include="~{header :: header}" class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start position-absolute ms-3 bg-white loopple-fixed-start" id="sidenav-main"></nav>
@@ -127,37 +129,59 @@
         <div class="row removable">
             <div class="card bg-transparent shadow-none mb-4">
                 <div class="card-header px-0 bg-transparent pb-0">
-                    <h6>Genre</h6>
+                    <h6>Edit Song</h6>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
-                    <form th:action="@{/songs/save}" method="post" th:object="${song}" class="row">
-                        <input type="hidden" th:field="*{id_song}" />
-                        <div class="form-group col-md-4">
+                    <form th:action="@{/songs/save_edit}" method="post" th:object="${song}" class="row" enctype="multipart/form-data">
+                        <div class="form-group col-md-4" style="display:none;">
                             <label class="control-label">Id</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control"  th:field="*{id_song}"  type="text">
                         </div>
-
                         <div class="form-group col-md-4">
                             <label class="control-label">Name: </label>
                             <input type="text" th:field="*{song_name}" class="form-control"/>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="control-label">Image</label>
+                            <div id="myfileupload">
+                                <input type="file" accept="image/*" name="image" id="uploadfile"  onchange="readURL(this);" />
+                                <img width="60" height="60" th:src="@{'http://localhost:9090/uploads/'+${song.image}}">
+                            </div>
+                            <div id="boxchoice">
+                                <a href="javascript:" class="Choicefile"><i class='bx bx-upload'></i></a>
+                                <p style="clear:both"></p>
+                            </div>
 
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label class="control-label">Link</label>
+                            <div>
+                                <input type="file" name="file_music" id="musicInput" accept=".mp3">
+                                <audio controls onchange="updateFileInput()">
+                                    <source th:src="@{'http://localhost:9090/'+${song.file_music}}" type="audio/mpeg">
+                                </audio>
+                            </div>
                         </div>
 
                         <div class="form-group col-md-4">
-                            <label class="control-label">Lyric</label>
+                            <label class="control-label">Lyric:</label>
                             <input type="text" th:field="*{lyric}" class="form-control">
                         </div>
-
-                        <div class="form-control col-md-4">
-                            <label class="control-label">Image</label>
-
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Genre:</label>
+                            <select name="id_category"  class="form-control" >
+                                <option value="" th:text="${id_category}" ></option>
+                                <option th:each="category : ${categories}" th:value="${category.id_category}" th:text="${category.name_category}"></option>
+                            </select>
                         </div>
-
-                        <div class="form-control col-md-4">
-                            <label class="control-label">Genre</label>
-                            <input type="text" th:field="*{id_category}" class="form-control">
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Artist:</label>
+                            <select name="id_artist" class="form-control" >
+                                <option value="" th:text="${id_artist}" >/option>
+                                <option th:each="artist : ${artists}" th:value="${artist.id_artist}" th:text="${artist.artist_name}"></option>
+                            </select>
                         </div>
-
                         <div>
                             <button style="margin-left: 20px;" type="submit" class="btn btn-save">Save</button>
                             <button th:href="@{/songs}" class="btn btn-cancel">Cancel</button>
@@ -180,6 +204,14 @@
 <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/Chart.extension.js"></script>
 <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/soft-ui-dashboard.min.js?v=1.0.2"></script>
 <script>
+    function updateFileInput() {
+        // Lấy giá trị hiện tại của thẻ <audio>
+        var audioSource = document.querySelector('audio source').getAttribute('src');
+
+        // Cập nhật giá trị của trường input
+        document.getElementById('musicInput').value = audioSource;
+    }
+
     if (document.querySelector(".chart-bar")) {
 
         var chartsBar = document.querySelectorAll(".chart-bar");

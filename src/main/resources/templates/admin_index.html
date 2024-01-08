@@ -1,0 +1,641 @@
+
+<!-- Loopple Templates: https://www.loopple.com/templates | Copyright Loopple (https://www.loopple.com) | This copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Music Admin Panel - Soft UI Dashboard</title>
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-icons.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-svg.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="assets/admin/css/theme.css">
+    <link rel="stylesheet" href="assets/admin/css/loopple/loopple.css">
+
+</head>
+
+<body>
+<nav th:include="header :: header" class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start position-absolute ms-3 bg-white loopple-fixed-start" id="sidenav-main"></nav>
+
+<div class="main-content" id="panel">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl bg-default" id="navbarTop">
+        <div class="container-fluid py-1 px-3">
+            <a class="navbar-brand" href="" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+                Soft UI Dashboard
+            </a>
+            <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                <ul class="navbar-nav  justify-content-start ms-md-auto">
+
+
+                    <li class="nav-item d-xl-none d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item px-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0">
+                            <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown pe-4 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-bell cursor-pointer" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                            <li class="mb-2">
+                                <a class="dropdown-item border-radius-md" href="javascript:;">
+                                    <div class="d-flex py-1">
+                                        <div class="my-auto">
+
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                <span class="font-weight-bold">New message</span> from Laur
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0 ">
+                                                <i class="fa fa-clock me-1" aria-hidden="true"></i>
+                                                13 minutes ago
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="dropdown-item border-radius-md" href="javascript:;">
+                                    <div class="d-flex py-1">
+                                        <div class="my-auto">
+
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                <span class="font-weight-bold">New album</span> by Travis Scott
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0 ">
+                                                <i class="fa fa-clock me-1" aria-hidden="true"></i>
+                                                1 day
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item border-radius-md" href="javascript:;">
+                                    <div class="d-flex py-1">
+                                        <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                                            <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <title>credit-card</title>
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                                        <g transform="translate(1716.000000, 291.000000)">
+                                                            <g transform="translate(453.000000, 454.000000)">
+                                                                <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                                                <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                Payment successfully completed
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0 ">
+                                                <i class="fa fa-clock me-1" aria-hidden="true"></i>
+                                                2 days
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="bg-white border-radius-lg d-flex">
+                        <input type="text" class="form-control border-0 ps-3" placeholder="Type here..." onfocus="focused(this)" onfocusout="defocused(this)">
+                        <button class="btn bg-gradient-primary my-1 me-1">Search</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid pt-3">
+        <div class="row removable">
+            <div class="col-lg-8">
+                <div class="row mb-4">
+                    <div class="col-md-3 col-6">
+                        <div class="card bg-transparent shadow-none mb-md-0 mb-4">
+                            <img src="https://images.unsplash.com/photo-1620939123578-bb16277cfd54?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHNvbmd8ZW58MHwyfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-8">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Easy on me</h6>
+                                    <p class="text-default opacity-8 text-xs font-weight-bold mb-0">Roxenne • 3:44</p>
+                                </div>
+                                <div class="col-4 my-auto text-end">
+                                    <button class="btn btn-icon-only btn-rounded border border-default shadow-none ms-auto mb-0 ms-auto">
+                                            <span class="btn-inner--icon ms-0">
+                                                <i class="fa fa-play text-dark" aria-hidden="true"></i>
+                                            </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card bg-transparent shadow-none mb-md-0 mb-4">
+                            <img src="https://images.unsplash.com/photo-1649910790213-028ed4980d67?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBpYW5vfGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-8">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Piano 2022</h6>
+                                    <p class="text-default opacity-8 text-xs font-weight-bold mb-0">Juliette • 2:49</p>
+                                </div>
+                                <div class="col-4 my-auto text-end">
+                                    <button class="btn btn-icon-only btn-rounded border border-default shadow-none ms-auto mb-0 ms-auto">
+                                            <span class="btn-inner--icon ms-0">
+                                                <i class="fa fa-play text-dark" aria-hidden="true"></i>
+                                            </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card bg-transparent shadow-none mb-md-0 mb-4">
+                            <img src="https://images.unsplash.com/photo-1518911710364-17ec553bde5d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c29uZ3xlbnwwfDJ8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-8">
+                                    <h6 class="text-darker font-weight-bolder mb-0">The way w...</h6>
+                                    <p class="text-default opacity-8 text-xs font-weight-bold mb-0">The Bridge • 4:20</p>
+                                </div>
+                                <div class="col-4 my-auto text-end">
+                                    <button class="btn btn-icon-only btn-rounded border border-default shadow-none ms-auto mb-0 ms-auto">
+                                            <span class="btn-inner--icon ms-0">
+                                                <i class="fa fa-play text-dark" aria-hidden="true"></i>
+                                            </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card bg-transparent shadow-none mb-md-0 mb-4">
+                            <img src="https://images.unsplash.com/photo-1626541650317-6ac1c2325995?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHNvbmd8ZW58MHwyfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-8">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Lamente ...</h6>
+                                    <p class="text-default opacity-8 text-xs font-weight-bold mb-0">Subieno • 3:38</p>
+                                </div>
+                                <div class="col-4 my-auto text-end">
+                                    <button class="btn btn-icon-only btn-rounded border border-default shadow-none ms-auto mb-0 ms-auto">
+                                            <span class="btn-inner--icon ms-0">
+                                                <i class="fa fa-play text-dark" aria-hidden="true"></i>
+                                            </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 position-relative">
+                    <div class="col-12">
+                        <hr class="horizontal dark">
+                        <h6 class="text-dark mb-2">My Recent Playlist</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="https://images.unsplash.com/photo-1574882225036-f2e197a85ad6?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmlvbGlufGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="w-100 border-radius-lg shadow-lg">
+                    </div>
+                    <div class="col-md-6 text-start my-auto">
+                        <h6 class="text-sm text-secondary mt-md-0 mt-4">Maron's Playlist</h6>
+                        <h5>The Way it Feels 2022</h5>
+                        <span class="badge text-secondary font-weight-normal border">Rock</span>
+                        <span class="badge text-secondary font-weight-normal border">2022</span>
+                        <span class="badge text-secondary font-weight-normal border">Top 10</span>
+                        <div class="d-flex align-items-center mt-3">
+                            <span class="text-secondary font-weight-normal text-sm me-2">40k Likes</span>
+                            <span class="text-secondary text-lg me-2">•</span>
+                            <span class="text-secondary font-weight-normal text-sm me-2">36 songs, 1h 32m 10s</span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-md-end mt-md-0 mt-4 h-100">
+                        <a href="javascript:;" class="text-dark font-weight-bold text-sm">See Details</a>
+                        <div class="dropdown text-dark">
+                            <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-ellipsis-h text-secondary" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end px-2 py-3" aria-labelledby="dropdownTable" style="">
+                                <li><a class="dropdown-item border-radius-md" href="javascript:;">Share</a></li>
+                                <li><a class="dropdown-item border-radius-md" href="javascript:;">Add to favorites</a></li>
+                            </ul>
+                        </div>
+                        <div class="position-absolute d-md-block d-none bottom-0 end-0">
+                            <button class="btn btn-icon bg-gradient-info ms-auto h-100" type="button">
+                                <span class="btn-inner--icon"><i class="ni ni-button-play"></i></span>
+                                <span class="btn-inner--text">Play Now</span>
+                            </button>
+                            <button class="btn btn-icon-only btn-rounded border border-default ms-2 shadow-none">
+                                    <span class="btn-inner--icon ms-0">
+                                        <i class="fa fa-share text-dark" aria-hidden="true"></i>
+                                    </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-transparent shadow-none mb-4">
+                    <div class="card-header px-0 bg-transparent pb-0">
+                        <h6>Top Artists</h6>
+                    </div>
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0 px-0">
+                                <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-0">#</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Title</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Artist</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Album</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">time</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="ps-0 text-xs text-dark font-weight-bold"></td>
+                                    <td>
+                                        <div class="d-flex px-3 py-1">
+                                            <div>
+
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="mb-0 text-sm"></h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="text-xs text-dark font-weight-bold mb-0">Julien Anthoine</p>
+                                    </td>
+                                    <td class="align-middle text-center text-sm">
+                                        <p class="text-xs text-dark font-weight-bold mb-0">No Idea - Single</p>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <p class="text-xs text-dark font-weight-bold mb-0">3:32</p>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 position-relative">
+                <h6 class="">Search</h6>
+                <div class="form-group">
+                    <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </span>
+                        <input type="text" class="form-control" placeholder="Search artist, title, album" aria-label="Username" aria-describedby="basic-addon1" onfocus="focused(this)" onfocusout="defocused(this)">
+                    </div>
+                </div>
+                <h6 class="">Popular Artists</h6>
+
+
+                <div class="row removable">
+                    <div class="col-4">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXR8ZW58MHwyfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Eminem</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1518991669955-9c7e78ec80ca?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHJhaXR8ZW58MHwyfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Adele</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHwyfDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Drake</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row removable">
+                    <div class="col-4">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHBvcnRyYWl0fGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Don Toliver</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHBvcnRyYWl0fGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Post Malone</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1208&amp;q=80" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Luise</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h6 class="mt-3">Top Podcasters</h6>
+                <div class="row removable">
+                    <div class="col-6">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBvcnRyYWl0fGVufDB8MnwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Michael John</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card bg-transparent shadow-none">
+                            <img src="https://images.unsplash.com/photo-1618018352910-72bdafdc82a6?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA3fHxwb3J0cmFpdHxlbnwwfDJ8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" class="img border-radius-md w-100">
+                            <div class="row mt-2">
+                                <div class="col-12 text-center">
+                                    <h6 class="text-darker font-weight-bolder mb-0">Daniel Krein</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="mt-3">Now Playing</h6>
+                <div class="card bg-transparent shadow-none">
+                    <img src="https://images.unsplash.com/photo-1575918679350-bf26b1b4da71?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1770&amp;q=80" class="img border-radius-md w-100">
+                    <div class="row mt-2">
+                        <div class="col-8">
+                            <h6 class="text-darker font-weight-bolder mb-0">You're Mines Still</h6>
+                            <p class="text-default opacity-8 text-xs font-weight-bold mb-0">Drake • 3:44</p>
+                        </div>
+                        <div class="col-4 my-auto text-end">
+                            <button class="btn btn-icon-only btn-rounded border border-default shadow-none ms-auto mb-0 ms-auto">
+                                    <span class="btn-inner--icon ms-0">
+                                        <i class="fa text-dark fa-pause" aria-hidden="true"></i>
+                                    </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer pt-3 pb-4">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-lg-between">
+                <div class="col-lg-6 mb-lg-0 mb-4">
+                    <div class="copyright text-center text-sm text-muted text-lg-start">
+                        © 2021,
+                        made with
+                        <a href="https://www.creative-tim.com/product/soft-ui-dashboard" class="font-weight-bold text-capitalize" target="_blank"> Soft UI Dashboard</a> &amp;
+                        <a href="https://www.loopple.com" class="font-weight-bold text-capitalize" target="_blank">Loopple</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link text-muted" target="_blank">Creative Tim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link text-muted" target="_blank">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link text-muted" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link pe-0 text-muted" target="_blank">License</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="loopple-badge">Made with<a href="https://www.loopple.com"><img src="https://www.loopple.com/img/loopple-logo.png" class="loopple-ml-1" style="width:55px"></a></div>
+<script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/core/popper.min.js"></script>
+<script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/core/bootstrap.min.js"></script>
+<script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/chartjs.min.js"></script>
+<script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/Chart.extension.js"></script>
+<script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/soft-ui-dashboard.min.js?v=1.0.2"></script>
+<script>
+    if (document.querySelector(".chart-bar")) {
+
+        var chartsBar = document.querySelectorAll(".chart-bar");
+
+        chartsBar.forEach(function(chart) {
+
+            new Chart(chart, {
+                type: "bar",
+                data: {
+                    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    datasets: [{
+                        label: "Sales",
+                        tension: 0.4,
+                        borderWidth: 0,
+                        borderRadius: 4,
+                        borderSkipped: false,
+                        backgroundColor: "#fff",
+                        data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
+                        maxBarThickness: 6,
+                    }, ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: "index",
+                    },
+                    scales: {
+                        y: {
+                            grid: {
+                                drawBorder: false,
+                                display: false,
+                                drawOnChartArea: false,
+                                drawTicks: false,
+                            },
+                            ticks: {
+                                suggestedMin: 0,
+                                suggestedMax: 600,
+                                beginAtZero: true,
+                                padding: 15,
+                                font: {
+                                    size: 14,
+                                    family: "Open Sans",
+                                    style: "normal",
+                                    lineHeight: 2,
+                                },
+                                color: "#fff",
+                            },
+                        },
+                        x: {
+                            grid: {
+                                drawBorder: false,
+                                display: false,
+                                drawOnChartArea: false,
+                                drawTicks: false,
+                            },
+                            ticks: {
+                                display: false,
+                            },
+                        },
+                    },
+                },
+            });
+
+
+        });
+
+    };
+
+    if (document.querySelector(".chart-line")) {
+        var chartsLine = document.querySelectorAll(".chart-line");
+
+        chartsLine.forEach(function(chart) {
+            var ctx = chart.getContext("2d");
+
+            var gradientStroke1 = ctx.createLinearGradient(0, 230, 0, 50);
+
+            gradientStroke1.addColorStop(1, "rgba(203,12,159,0.2)");
+            gradientStroke1.addColorStop(0.2, "rgba(72,72,176,0.0)");
+            gradientStroke1.addColorStop(0, "rgba(203,12,159,0)"); //purple colors
+
+            var gradientStroke2 = ctx.createLinearGradient(0, 230, 0, 50);
+
+            gradientStroke2.addColorStop(1, "rgba(20,23,39,0.2)");
+            gradientStroke2.addColorStop(0.2, "rgba(72,72,176,0.0)");
+            gradientStroke2.addColorStop(0, "rgba(20,23,39,0)"); //purple colors
+
+            new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    datasets: [{
+                        label: "Mobile apps",
+                        tension: 0.4,
+                        borderWidth: 0,
+                        pointRadius: 0,
+                        borderColor: "#cb0c9f",
+                        borderWidth: 3,
+                        backgroundColor: gradientStroke1,
+                        fill: true,
+                        data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                        maxBarThickness: 6,
+                    },
+                        {
+                            label: "Websites",
+                            tension: 0.4,
+                            borderWidth: 0,
+                            pointRadius: 0,
+                            borderColor: "#3A416F",
+                            borderWidth: 3,
+                            backgroundColor: gradientStroke2,
+                            fill: true,
+                            data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+                            maxBarThickness: 6,
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: "index",
+                    },
+                    scales: {
+                        y: {
+                            grid: {
+                                drawBorder: false,
+                                display: true,
+                                drawOnChartArea: true,
+                                drawTicks: false,
+                                borderDash: [5, 5],
+                            },
+                            ticks: {
+                                display: true,
+                                padding: 10,
+                                color: "#b2b9bf",
+                                font: {
+                                    size: 11,
+                                    family: "Open Sans",
+                                    style: "normal",
+                                    lineHeight: 2,
+                                },
+                            },
+                        },
+                        x: {
+                            grid: {
+                                drawBorder: false,
+                                display: false,
+                                drawOnChartArea: false,
+                                drawTicks: false,
+                                borderDash: [5, 5],
+                            },
+                            ticks: {
+                                display: true,
+                                color: "#b2b9bf",
+                                padding: 20,
+                                font: {
+                                    size: 11,
+                                    family: "Open Sans",
+                                    style: "normal",
+                                    lineHeight: 2,
+                                },
+                            },
+                        },
+                    },
+                },
+            });
+
+        });
+    };
+
+</script>
+</body>

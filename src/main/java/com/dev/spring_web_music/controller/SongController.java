@@ -67,12 +67,43 @@ public class SongController {
         return "redirect:/songs";
     }
 
+    @PostMapping("/songs/save_edit")
+    public String saveSongEdit(@RequestParam("id_song") Integer id, @RequestParam("song_name") String song_name, @RequestParam("id_category") Integer id_category, @RequestParam("lyric") String lyric, @RequestParam("image") MultipartFile image, @RequestParam("file_music") MultipartFile file_music, @RequestParam("id_artist") Integer id_artist) throws IOException {
+        try {
+            songService.delete(id);
+        } catch (CateNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        songService.save(song_name, lyric, image, file_music, id_category, id_artist);
+        return "redirect:/songs";
+    }
+
     @GetMapping("/songs/edit/{id_song}")
     public String showEditForm(@PathVariable("id_song") Integer id_song, Model model, RedirectAttributes re) {
         try {
+            List<Category> categoryList = categoryService.listAll();
+            List<Artist> artistList = artistService.listAll();
             Song song = songService.getId(id_song);
             model.addAttribute("song", song);
+            model.addAttribute("categories", categoryList);
+            model.addAttribute("artists", artistList);
             model.addAttribute("pageTitle", "Edit Song(ID: " + id_song + ")");
+            // get default catefory
+            String categoryDefault = "";
+            for (Integer i=0;i<categoryList.size();i++){
+                if (categoryList.get(i).getId_category()==song.getId_category()){
+                    categoryDefault = categoryList.get(i).getName_category();
+                }
+            }
+            model.addAttribute("id_category", categoryDefault);
+            // get dafault artist
+            String artistDefault = "";
+            for (Integer i=0;i<artistList.size();i++){
+                if (artistList.get(i).getId_artist()==song.getId_artist()){
+                    artistDefault = artistList.get(i).getArtist_name();
+                }
+            }
+            model.addAttribute("id_artist", artistDefault);
             return "song/song_edit";
         } catch (CateNotFoundException e) {
             re.addFlashAttribute("message", e.getMessage());
